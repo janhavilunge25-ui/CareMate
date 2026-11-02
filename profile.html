@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareMate | Your Health Profile</title>
+<meta name="description" content="Tell CareMate a few details to get your personalised diet, yoga and wellness plan.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#05190A">
+<link rel="icon" href="logo-.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="hp-profile">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+    <div class="navigation">
+         <a href="index.html" aria-label="Back to CareMate home">
+             <img src="logo-.png" alt="CareMate Logo" class="logo-image"></a>
+
+        <div class="pf-right">
+            <span class="step-indicator">Step 2 of 3 · Health profile</span>
+            <a href="index.html" class="pf-logout" id="pfLogout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+        </div>
+    </div>
+    <!-- progress bar: 66% on the profile form, 100% when the plan is shown (updated in script.js) -->
+    <div class="pf-progress" aria-hidden="true"><i id="pfBar"></i></div>
+</header>
+
+<main class="form-page" id="main">
+    <div class="form-card" style="margin-top: 60px;">
+        <div class="pf-hero">
+            <div class="pf-badge"><i class="fa-solid fa-user-pen"></i></div>
+            <div>
+                <h1>Let's personalize your routine</h1>
+                <p class="form-intro">This takes about a minute. Nothing here replaces advice from your doctor
+                    or dietitian — it just helps us shape suggestions around your situation.</p>
+            </div>
+        </div>
+        <ul class="pf-trust">
+            <li><i class="fa-regular fa-clock"></i> About 1 minute</li>
+            <li><i class="fa-solid fa-lock"></i> Saved on this device</li>
+            <li><i class="fa-solid fa-user-doctor"></i> Not medical advice</li>
+        </ul>
+        <p class="pf-motive"><i class="fa-solid fa-seedling"></i> Every healthy journey begins with one small step. You have already taken it.</p>
+
+        <form id="profileForm">
+            <div class="pf-group"><span><i class="fa-solid fa-user"></i></span>About you</div>
+            <div class="form-grid">
+                <div class="input-box">
+                    <input type="text" id="fullName" required>
+                    <label>Full name</label>
+                    <i class="fa-solid fa-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <input type="number" id="age" min="1" max="120" required>
+                    <label>Age</label>
+                    <i class="fa-solid fa-cake-candles icon"></i>
+                </div>
+            </div>
+
+            <div class="input-box full">
+                <input type="number" id="weight" min="1" max="400" step="0.1" required>
+                <label>Weight (kg)</label>
+                <i class="fa-solid fa-weight-scale icon"></i>
+            </div>
+
+            <div class="form-grid">
+                <div class="select-box">
+                    <label>Gender</label>
+                    <select id="gender" required>
+                        <option value="" disabled selected>Select</option>
+                        <option>Female</option>
+                        <option>Male</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="select-box">
+                    <label>Activity level</label>
+                    <select id="activity" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="sedentary">Mostly sitting / low activity</option>
+                        <option value="light">Lightly active</option>
+                        <option value="active">Active / exercises regularly</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="pf-group"><span><i class="fa-solid fa-heart-pulse"></i></span>Your health</div>
+            <div class="select-box full">
+                <label>Health condition</label>
+                <select id="condition" required>
+                    <option value="" disabled selected>Select the condition you'd like support with</option>
+                    <optgroup label="Heart &amp; blood sugar">
+                        <option value="hypertension">Hypertension (high blood pressure)</option>
+                        <option value="hypotension">Hypotension (low blood pressure)</option>
+                        <option value="diabetes">Diabetes</option>
+                        <option value="bloodsugar">Blood sugar</option>
+                    </optgroup>
+                    <optgroup label="Women &amp; family">
+                        <option value="pcod">PCOD</option>
+                        <option value="pcos">PCOS</option>
+                        <option value="pregnancy">Pregnancy &amp; lactation</option>
+                        <option value="child">Child health (parent or guardian fills in)</option>
+                    </optgroup>
+                    <optgroup label="Gut, kidney &amp; hormones">
+                        <option value="ibd">IBD (Inflammatory Bowel Disease)</option>
+                        <option value="kidney">Kidney stone</option>
+                        <option value="thyroid">Thyroid</option>
+                        <option value="detox">Detox therapy (body detoxification)</option>
+                    </optgroup>
+                    <optgroup label="Blood, bones &amp; immunity">
+                        <option value="anaemia">Anaemia</option>
+                        <option value="arthritis">Arthritis &amp; bone health</option>
+                        <option value="immunity">Low immunity</option>
+                        <option value="cancer">Cancer malnutrition</option>
+                    </optgroup>
+                    <optgroup label="Weight">
+                        <option value="obesity">Obesity management</option>
+                        <option value="underweight">Weight gain</option>
+                    </optgroup>
+                    <option value="general">General wellness / none of these</option>
+                </select>
+            </div>
+
+            <!-- ===== Optional: anyone can log BP and/or blood sugar, regardless of condition selected ===== -->
+            <div class="select-box full">
+                <label>Do you track blood pressure or blood sugar?</label>
+                <p class="goals-sub">Optional — tick whichever apply to you.</p>
+
+                <div class="toggle-row">
+                    <label class="toggle-pill">
+                        <input type="checkbox" id="hasBp">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        <span>I'd like to log blood pressure</span>
+                    </label>
+                    <label class="toggle-pill">
+                        <input type="checkbox" id="hasSugar">
+                        <i class="fa-solid fa-droplet"></i>
+                        <span>I'd like to log blood sugar</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="select-box full condition-section" id="bpSection" hidden>
+                <label>Blood pressure reading</label>
+                <div class="form-grid">
+                    <div class="input-box">
+                        <input type="number" id="bpSystolic" min="60" max="260">
+                        <label>Systolic (mmHg)</label>
+                        <i class="fa-solid fa-heart-pulse icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="number" id="bpDiastolic" min="30" max="160">
+                        <label>Diastolic (mmHg)</label>
+                        <i class="fa-solid fa-heart-pulse icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="select-box full condition-section" id="sugarSection" hidden>
+                <label>Blood sugar reading</label>
+                <div class="form-grid">
+                    <div class="input-box">
+                        <input type="number" id="sugarLevel" min="30" max="600">
+                        <label>Level (mg/dL)</label>
+                        <i class="fa-solid fa-droplet icon"></i>
+                    </div>
+                    <div class="select-box">
+                        <label>Reading type</label>
+                        <select id="sugarType">
+                            <option value="" disabled selected>Select</option>
+                            <option value="fasting">Fasting</option>
+                            <option value="post_meal">Post-meal</option>
+                            <option value="random">Random</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pf-group"><span><i class="fa-solid fa-bowl-food"></i></span>Food &amp; notes</div>
+            <div class="select-box full">
+                <label>Food preference</label>
+                <select id="foodPref" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="veg">Vegetarian</option>
+                    <option value="nonveg">Non-vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                </select>
+            </div>
+
+            <div class="input-box textarea-box full">
+                <textarea id="notes" rows="3" placeholder=" "></textarea>
+                <label>Allergies, restrictions or anything else we should know (optional)</label>
+            </div>
+
+            <div class="pf-group"><span><i class="fa-solid fa-bullseye"></i></span>Your goals</div>
+            <!-- ===== What would you like help with? — added below allergies, rest of form unchanged ===== -->
+            <div class="goals-box full">
+                <label>What would you like help with?</label>
+                <p class="goals-sub">Pick as many as apply — we'll tailor your recommendations around these.</p>
+
+                <div class="goals-grid" id="goalsGrid">
+                    <label class="goal-card">
+                        <input type="checkbox" name="goals" value="diet">
+                        <i class="fa-solid fa-utensils"></i>
+                        <span>Diet Plan</span>
+                    </label>
+                    <label class="goal-card">
+                        <input type="checkbox" name="goals" value="yoga">
+                        <i class="fa-solid fa-om"></i>
+                        <span>Yoga</span>
+                    </label>
+                    <label class="goal-card">
+                        <input type="checkbox" name="goals" value="meditation">
+                        <i class="fa-solid fa-spa"></i>
+                        <span>Meditation & Stress Relief</span>
+                    </label>
+                    <label class="goal-card">
+                        <input type="checkbox" name="goals" value="tracking">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Progress Tracking</span>
+                    </label>
+                    <label class="goal-card">
+                        <input type="checkbox" name="goals" value="reminders">
+                        <i class="fa-solid fa-bell"></i>
+                        <span>Reminders</span>
+                    </label>
+                    <label class="goal-card">
+                        <input type="checkbox" name="goals" value="info">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>Condition Info</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Get my plan <i class="fa-solid fa-arrow-right"></i></button>
+            <p class="pf-note"><i class="fa-solid fa-shield-heart"></i> Your details stay on this device. CareMate gives general wellness guidance only.</p>
+        </form>
+    </div>
+
+    <!-- ===== Step 3 "Your plan" shows here, on the same page, after "Get my plan" ===== -->
+    <div class="cm-card" id="cmCard" style="margin-top: 60px;" hidden></div>
+</main>
+
+<!-- ===== small message bar used by the plan (reminders / save) ===== -->
+<div class="cm-toast" id="cmToast" role="status" aria-live="polite"></div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p class="ft-disc">CareMate gives general wellness guidance only. It does not diagnose conditions or replace your doctor or dietitian.</p>
+        <p>&copy; 2026 CareMate. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
