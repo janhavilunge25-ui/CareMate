@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareMate | Personalised diet, yoga and wellness plans</title>
+    <meta name="description" content="CareMate builds a simple diet, yoga and meditation plan around your health condition, food preference and daily routine. General wellness guidance, never a replacement for your doctor.">
+    <meta name="theme-color" content="#05190A">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CareMate | Personalised diet, yoga and wellness plans">
+    <meta property="og:description" content="Tell us about you and get a diet, yoga and meditation routine shaped around your condition.">
+    <link rel="icon" href="logo-.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/poppins">
+</head>
+<body class="hp-home">
+
+    <a class="skip-link" href="#home">Skip to main content</a>
+
+    <!-- ===== Splash screen: shows the CareMate logo on load, then hands off to the site ===== -->
+    <div id="splash-screen">
+        <img src="logo-.png" alt="CareMate" class="splash-logo">
+        <div class="splash-loader"></div>
+    </div>
+
+    <header>
+        <div class="navigation">
+            <input type="checkbox" id="check">
+            <label for="check" class="check_btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <img src="logo-.png" alt="CareMate Logo" class="logo-image">
+
+
+            <nav>
+                <ul>
+                    <!-- CHANGED: links now jump to the sections below (was Home_page.html etc.) -->
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><button class="login-btn">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- =====================================================================
+         ADDED: HOME
+         ===================================================================== -->
+    <section class="hp-hero" id="home">
+        <div class="hp-wrap hp-hero-grid">
+
+            <div class="hp-reveal">
+                <span class="hp-pill"><i class="fa-solid fa-leaf"></i> Personalised wellness, made simple</span>
+                <h1>Eat, move and breathe <span class="hp-grad">the way your body needs.</span></h1>
+                <p class="hp-lead">CareMate builds a diet, yoga and meditation plan around your health condition,
+                    food preference and daily routine, in about a minute.</p>
+
+                <div class="hp-cta">
+                    <button type="button" class="hp-btn primary" data-open-register>Get my plan <i class="fa-solid fa-arrow-right"></i></button>
+                    <a href="#how" class="hp-btn ghost">See how it works</a>
+                </div>
+
+                <ul class="hp-trust">
+                    <li><i class="fa-solid fa-circle-check"></i>Easy daily plans</li>
+                    <li><i class="fa-solid fa-circle-check"></i>Indian meal options</li>
+                    <li><i class="fa-solid fa-circle-check"></i>Never replaces your doctor</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- stats strip -->
+        <div class="hp-wrap" style="margin-top:56px;">
+            <div class="hp-stats hp-reveal">
+                <div class="hp-stat"><b data-count="18">0</b><span>Conditions supported</span></div>
+                <div class="hp-stat"><b data-count="6">0</b><span>Care areas in one place</span></div>
+                <div class="hp-stat"><b data-count="5">0</b><span>Daily meals planned</span></div>
+                <div class="hp-stat"><b data-count="1" data-suffix=" min">0</b><span>To set up your profile</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- how it works -->
+    <section class="hp-section" id="how">
+        <div class="hp-wrap">
+            <div class="hp-head hp-reveal">
+                <span class="hp-eyebrow"><i class="fa-solid fa-route"></i> How it works</span>
+                <h2>Your plan in three easy steps</h2>
+                <p>No long forms, no confusing charts. Just answer a few questions and start.</p>
+            </div>
+            <div class="hp-steps">
+                <div class="hp-step hp-glass hp-reveal">
+                    <div class="hp-num">1</div>
+                    <h3>Create your account</h3>
+                    <p>Register or log in with your email in a few seconds.</p>
+                </div>
+                <div class="hp-step hp-glass hp-reveal" style="--d:.12s">
+                    <div class="hp-num">2</div>
+                    <h3>Tell us about you</h3>
+                    <p>Add your age, weight, food preference and health condition.</p>
+                </div>
+                <div class="hp-step hp-glass hp-reveal" style="--d:.24s">
+                    <div class="hp-num">3</div>
+                    <h3>Follow your plan</h3>
+                    <p>Get your diet, yoga and wellness routine with videos to learn from.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- features -->
+    <section class="hp-section" id="features" style="padding-top:20px;">
+        <div class="hp-wrap">
+            <div class="hp-head hp-reveal">
+                <span class="hp-eyebrow"><i class="fa-solid fa-sparkles"></i> What you get</span>
+                <h2>Everything for a healthier routine</h2>
+                <p>Pick the areas you need. CareMate shows only what you choose.</p>
+            </div>
+            <div class="hp-grid3">
+                <div class="hp-feature hp-glass hp-reveal"><div class="hp-ficon"><i class="fa-solid fa-utensils"></i></div><h3>Diet Plan</h3><p>Simple Indian meals matched to your food preference and condition.</p></div>
+                <div class="hp-feature hp-glass hp-reveal" style="--d:.08s"><div class="hp-ficon"><i class="fa-solid fa-om"></i></div><h3>Yoga</h3><p>Poses chosen for your condition, with time guidance and safety notes.</p></div>
+                <div class="hp-feature hp-glass hp-reveal" style="--d:.16s"><div class="hp-ficon"><i class="fa-solid fa-spa"></i></div><h3>Meditation &amp; Stress Relief</h3><p>Short daily breathing and calm practices you can keep up.</p></div>
+                <div class="hp-feature hp-glass hp-reveal"><div class="hp-ficon"><i class="fa-solid fa-chart-line"></i></div><h3>Progress Tracking</h3><p>A daily checklist and a progress bar to keep you on track.</p></div>
+                <div class="hp-feature hp-glass hp-reveal" style="--d:.08s"><div class="hp-ficon"><i class="fa-solid fa-bell"></i></div><h3>Reminders</h3><p>Set your own times for water, meals, yoga and meditation.</p></div>
+                <div class="hp-feature hp-glass hp-reveal" style="--d:.16s"><div class="hp-ficon"><i class="fa-solid fa-circle-info"></i></div><h3>Condition Info</h3><p>Easy written guides and videos about your condition.</p></div>
+            </div>
+
+            <!-- conditions marquee (list is repeated once so the loop is seamless) -->
+            <div class="hp-marquee hp-reveal" style="margin-top:34px;" aria-label="Supported conditions">
+                <div class="hp-track">
+                    <span class="hp-tag"><i class="fa-solid fa-droplet"></i>Diabetes</span>
+                    <span class="hp-tag"><i class="fa-solid fa-droplet"></i>Blood sugar</span>
+                    <span class="hp-tag"><i class="fa-solid fa-gauge-high"></i>Hypertension</span>
+                    <span class="hp-tag"><i class="fa-solid fa-gauge-high"></i>Hypotension</span>
+                    <span class="hp-tag"><i class="fa-solid fa-bolt"></i>Thyroid</span>
+                    <span class="hp-tag"><i class="fa-solid fa-heart-pulse"></i>PCOD</span>
+                    <span class="hp-tag"><i class="fa-solid fa-heart-pulse"></i>PCOS</span>
+                    <span class="hp-tag"><i class="fa-solid fa-person-pregnant"></i>Pregnancy &amp; lactation</span>
+                    <span class="hp-tag"><i class="fa-solid fa-child"></i>Child health</span>
+                    <span class="hp-tag"><i class="fa-solid fa-droplet"></i>Anaemia</span>
+                    <span class="hp-tag"><i class="fa-solid fa-bone"></i>Arthritis &amp; bone health</span>
+                    <span class="hp-tag"><i class="fa-solid fa-shield-heart"></i>Low immunity</span>
+                    <span class="hp-tag"><i class="fa-solid fa-heart-pulse"></i>IBD</span>
+                    <span class="hp-tag"><i class="fa-solid fa-gem"></i>Kidney stone</span>
+                    <span class="hp-tag"><i class="fa-solid fa-leaf"></i>Detox therapy</span>
+                    <span class="hp-tag"><i class="fa-solid fa-ribbon"></i>Cancer malnutrition</span>
+                    <span class="hp-tag"><i class="fa-solid fa-weight-scale"></i>Obesity management</span>
+                    <span class="hp-tag"><i class="fa-solid fa-weight-scale"></i>Weight gain</span>
+                    <span class="hp-tag"><i class="fa-solid fa-droplet"></i>Diabetes</span>
+                    <span class="hp-tag"><i class="fa-solid fa-droplet"></i>Blood sugar</span>
+                    <span class="hp-tag"><i class="fa-solid fa-gauge-high"></i>Hypertension</span>
+                    <span class="hp-tag"><i class="fa-solid fa-gauge-high"></i>Hypotension</span>
+                    <span class="hp-tag"><i class="fa-solid fa-bolt"></i>Thyroid</span>
+                    <span class="hp-tag"><i class="fa-solid fa-heart-pulse"></i>PCOD</span>
+                    <span class="hp-tag"><i class="fa-solid fa-heart-pulse"></i>PCOS</span>
+                    <span class="hp-tag"><i class="fa-solid fa-person-pregnant"></i>Pregnancy &amp; lactation</span>
+                    <span class="hp-tag"><i class="fa-solid fa-child"></i>Child health</span>
+                    <span class="hp-tag"><i class="fa-solid fa-droplet"></i>Anaemia</span>
+                    <span class="hp-tag"><i class="fa-solid fa-bone"></i>Arthritis &amp; bone health</span>
+                    <span class="hp-tag"><i class="fa-solid fa-shield-heart"></i>Low immunity</span>
+                    <span class="hp-tag"><i class="fa-solid fa-heart-pulse"></i>IBD</span>
+                    <span class="hp-tag"><i class="fa-solid fa-gem"></i>Kidney stone</span>
+                    <span class="hp-tag"><i class="fa-solid fa-leaf"></i>Detox therapy</span>
+                    <span class="hp-tag"><i class="fa-solid fa-ribbon"></i>Cancer malnutrition</span>
+                    <span class="hp-tag"><i class="fa-solid fa-weight-scale"></i>Obesity management</span>
+                    <span class="hp-tag"><i class="fa-solid fa-weight-scale"></i>Weight gain</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =====================================================================
+         ADDED: ABOUT
+         ===================================================================== -->
+    <!-- a thought for the visitor -->
+    <section class="hp-quote-band">
+        <div class="hp-wrap">
+            <div class="hp-qcard hp-glass hp-reveal">
+                <i class="fa-solid fa-seedling"></i>
+                <blockquote>Health is a journey, not a race. Start with one healthy meal today and let every small step count.</blockquote>
+                <span>Your wellness journey begins here</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="hp-section" id="about">
+        <div class="hp-wrap">
+            <div class="hp-head hp-reveal">
+                <span class="hp-eyebrow"><i class="fa-solid fa-heart"></i> About CareMate</span>
+                <h2>Healthy habits, shaped around you</h2>
+                <p>A Personalized Diet, Exercise and Wellness Recommendation System.</p>
+            </div>
+
+            <div class="hp-about-grid">
+                <div class="hp-story hp-glass hp-reveal">
+                    <h3>Why we built it</h3>
+                    <p>General health advice rarely fits everyone. A person with PCOD, high blood pressure or diabetes
+                        needs different food and movement from someone who just wants to stay fit.</p>
+                    <p>CareMate brings diet, yoga and meditation together in one simple place. You share a few details,
+                        and it prepares an easy daily routine that you can follow, track and adjust.</p>
+                    <p>The food guidance in CareMate is prepared with our team dietitian, Dhanashree Pundkar, so every suggestion is practical, simple and easy to follow.</p>
+                </div>
+
+                <div class="hp-values">
+                    <div class="hp-value hp-glass hp-reveal"><div class="hp-ficon"><i class="fa-solid fa-user-check"></i></div><div><h4>Personal</h4><p>Built from your age, weight, food preference and condition.</p></div></div>
+                    <div class="hp-value hp-glass hp-reveal" style="--d:.1s"><div class="hp-ficon"><i class="fa-solid fa-feather"></i></div><div><h4>Simple</h4><p>Short plans and videos that are easy to start and keep.</p></div></div>
+                    <div class="hp-value hp-glass hp-reveal" style="--d:.2s"><div class="hp-ficon"><i class="fa-solid fa-shield-heart"></i></div><div><h4>Safe</h4><p>General wellness guidance that never replaces medical advice.</p></div></div>
+                </div>
+            </div>
+
+            <div class="hp-callout hp-reveal">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <div><b>Please note:</b> CareMate does not diagnose conditions or prescribe treatment.
+                    Always check with your doctor or dietitian before changing your diet or exercise.</div>
+            </div>
+
+            <!-- team: edit the roles below if needed -->
+            <div class="hp-head hp-reveal" style="margin-top:56px; margin-bottom:0;">
+                <span class="hp-eyebrow"><i class="fa-solid fa-people-group"></i> The team</span>
+                <h2>The people behind CareMate</h2>
+            </div>
+            <div class="hp-team">
+                <div class="hp-member hp-glass hp-reveal" data-member="dhanashree-pundkar" role="button" tabindex="0" aria-label="View profile of Dhanashree Pundkar"><div class="hp-avatar">DP</div><b>Dhanashree Pundkar</b><span class="hp-role"><i class="fa-solid fa-leaf"></i> Dietitian</span><em class="hp-view">View profile <i class="fa-solid fa-arrow-right"></i></em></div>
+                <div class="hp-member hp-glass hp-reveal" style="--d:.08s" data-member="janhavi-lunge" role="button" tabindex="0" aria-label="View profile of Janhavi Lunge"><div class="hp-avatar">JL</div><b>Janhavi Lunge</b><span>Team member</span><em class="hp-view">View profile <i class="fa-solid fa-arrow-right"></i></em></div>
+                <div class="hp-member hp-glass hp-reveal" style="--d:.16s" data-member="ruchika-thakare" role="button" tabindex="0" aria-label="View profile of Ruchika Thakare"><div class="hp-avatar">RT</div><b>Ruchika Thakare</b><span>Team member</span><em class="hp-view">View profile <i class="fa-solid fa-arrow-right"></i></em></div>
+                <div class="hp-member hp-glass hp-reveal" style="--d:.24s" data-member="dhanashree-sarap" role="button" tabindex="0" aria-label="View profile of Dhanashree Sarap"><div class="hp-avatar">DS</div><b>Dhanashree Sarap</b><span>Team member</span><em class="hp-view">View profile <i class="fa-solid fa-arrow-right"></i></em></div>
+                <div class="hp-member hp-glass hp-reveal" style="--d:.32s" data-member="vedika-pande" role="button" tabindex="0" aria-label="View profile of Vedika Pandey"><div class="hp-avatar">VP</div><b>Vedika Pandey</b><span>Team member</span><em class="hp-view">View profile <i class="fa-solid fa-arrow-right"></i></em></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =====================================================================
+         ADDED: CONTACT
+         ===================================================================== -->
+    <section class="hp-section" id="contact">
+        <div class="hp-wrap">
+            <div class="hp-head hp-reveal">
+                <span class="hp-eyebrow"><i class="fa-solid fa-envelope-open-text"></i> Contact us</span>
+                <h2>We’d love to hear from you</h2>
+                <p>Questions, feedback or ideas? Send us a message and we will reply soon.</p>
+            </div>
+
+            <div class="hp-contact-grid">
+                <div class="hp-reveal">
+                    <div class="hp-info">
+                        <!-- replace the details below with your real ones -->
+                        <div class="hp-info-card hp-glass"><div class="hp-ficon"><i class="fa-solid fa-user-doctor"></i></div><div><small>Diet questions</small><b>Dhanashree Pundkar, Dietitian</b></div></div>
+                        <div class="hp-info-card hp-glass"><div class="hp-ficon"><i class="fa-solid fa-envelope"></i></div><div><small>Email</small><b>caremate92@gmail.com</b></div></div>
+                        <div class="hp-info-card hp-glass"><div class="hp-ficon"><i class="fa-solid fa-location-dot"></i></div><div><small>Location</small><b>Akola, Maharashtra</b></div></div>
+                    </div>
+
+                    <div class="hp-faq">
+                        <details>
+                            <summary>Is CareMate a replacement for my doctor?</summary>
+                            <p>No. CareMate gives general wellness guidance only. Please check with your doctor or dietitian.</p>
+                        </details>
+                        <details>
+                            <summary>How is my plan created?</summary>
+                            <p>Your plan is based on your profile, such as food preference, activity level and condition.</p>
+                        </details>
+                        <details>
+                            <summary>Will I get the same food every day?</summary>
+                            <p>No. Your diet plan has a different menu for each of 7 days, so you can enjoy variety and keep going. After Day 7 it starts again.</p>
+                        </details>
+                        <details>
+                            <summary>Which health conditions are covered?</summary>
+                            <p>Hypertension and hypotension (high and low blood pressure), diabetes and blood sugar, thyroid, PCOD and PCOS, anaemia, low immunity, arthritis and bone health, pregnancy and lactation, child health, detox therapy, kidney stone, cancer malnutrition, IBD, obesity management and weight gain, plus general wellness.</p>
+                        </details>
+                        <details>
+                            <summary>Can I ask the dietitian a question?</summary>
+                            <p>Yes. Open your plan and choose “Ask a Question” in Your areas, or send a message from this Contact section.</p>
+                        </details>
+                        <details>
+                            <summary>Can I choose what I see?</summary>
+                            <p>Yes. Tick only the areas you want help with, and your plan shows just those.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <form class="hp-form hp-glass hp-reveal" id="hpContactForm" style="--d:.12s" novalidate>
+                    <h3>Send a message</h3>
+                    <p>Send us a question, feedback or an idea.</p>
+
+                    <input type="text" id="hpWebsite" class="hp-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <div class="hp-row">
+                        <div class="hp-field">
+                            <label for="hpName">Your name</label>
+                            <input type="text" id="hpName" placeholder="Full name" autocomplete="name">
+                            <div class="hp-err">Please enter your name.</div>
+                        </div>
+                        <div class="hp-field">
+                            <label for="hpEmail">Email</label>
+                            <input type="email" id="hpEmail" placeholder="you@example.com" autocomplete="email">
+                            <div class="hp-err">Please enter a valid email.</div>
+                        </div>
+                    </div>
+
+                    <div class="hp-field">
+                        <label for="hpTopic">Topic</label>
+                        <select id="hpTopic">
+                            <option>Ask the dietitian</option>
+                            <option>General question</option>
+                            <option>Feedback</option>
+                            <option>Report a problem</option>
+                            <option>Suggest a feature</option>
+                        </select>
+                    </div>
+
+                    <div class="hp-field">
+                        <label for="hpMessage">Message</label>
+                        <textarea id="hpMessage" placeholder="Write your message here"></textarea>
+                        <div class="hp-err">Please write at least 10 characters.</div>
+                    </div>
+
+                    <button type="submit" class="hp-btn primary">Send message <i class="fa-solid fa-paper-plane"></i></button>
+                    <div class="hp-form-msg" id="hpFormMsg" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="cover_box" role="dialog" aria-modal="true" aria-label="Login or register">
+        <div class="form-box login active">
+            <span class="icon-close" role="button" tabindex="0" aria-label="Close"><i class="fa-solid fa-xmark"></i></span>
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <input type="email" name="email" autocomplete="email" required>
+                    <label>Email</label>
+                    <i class="fa-solid fa-envelope icon"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" autocomplete="current-password" required>
+                    <label>Password</label>
+                    <i class="fa-solid fa-lock icon"></i>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" name="remember" checked> Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+
+        <!-- registration -->
+        <div class="form-box register" style="margin-top: 50px;">
+            <span class="icon-close" role="button" tabindex="0" aria-label="Close"><i class="fa-solid fa-xmark"></i></span>
+            <h2>Register</h2>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" name="username" autocomplete="name" required>
+                    <label>Username</label>
+                    <i class="fa-solid fa-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" autocomplete="email" required>
+                    <label>Email</label>
+                    <i class="fa-solid fa-envelope icon"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" autocomplete="new-password" required>
+                    <label>Password</label>
+                    <i class="fa-solid fa-lock icon"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="confirm" autocomplete="new-password" required>
+                    <label>Confirm password</label>
+                    <i class="fa-solid fa-lock icon"></i>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" name="terms"> Agree to terms &amp; conditions</label>
+
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- team member profile (opens when a member card is clicked) -->
+    <div class="hp-modal" id="hpMember" hidden>
+        <div class="hp-modal-card" role="dialog" aria-modal="true" aria-labelledby="hpMemName">
+            <button type="button" class="hp-modal-x" id="hpMemClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="hp-modal-head">
+                <div class="hp-avatar lg" id="hpMemAv"></div>
+                <div><h3 id="hpMemName"></h3><span class="hp-modal-role" id="hpMemRole"></span></div>
+            </div>
+            <div class="hp-modal-body" id="hpMemBody"></div>
+        </div>
+    </div>
+
+    <!-- back to top (shows after scrolling) -->
+    <button type="button" class="hp-top" id="hpTop" aria-label="Back to top" hidden><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="ft-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#" data-open-login>Login</a>
+            </div>
+            <!-- replace the "#" links below with your real social pages -->
+            <div>
+                <a href="#" class="social-icons" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icons" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icons" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icons" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="ft-disc">CareMate gives general wellness guidance only. It does not diagnose conditions or replace your doctor or dietitian.</p>
+            <p>&copy; 2026 CareMate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- EmailJS: sends the Contact form messages -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
